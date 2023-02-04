@@ -173,12 +173,9 @@ dependencies = [
 
 [[package]]
 name = "hermit-abi"
-version = "0.2.6"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ee512640fe35acbfb4bb779db6f0d80704c2cacfa2e39b601ef3e3f47d1ae4c7"
-dependencies = [
- "libc",
-]
+checksum = "856b5cb0902c2b6d65d5fd97dfa30f9b70c7538e770b98eab5ed52d8db923e01"
 
 [[package]]
 name = "humantime"
@@ -196,19 +193,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1abeb7a0dd0f8181267ff8adc397075586500b81b28a73e8a0208b00fc170fb3"
 dependencies = [
  "libc",
- "windows-sys 0.45.0",
+ "windows-sys",
 ]
 
 [[package]]
 name = "is-terminal"
-version = "0.4.2"
+version = "0.4.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "28dfb6c8100ccc63462345b67d1bbc3679177c75ee4bf59bf29c8b1d110b8189"
+checksum = "22e18b0a45d56fe973d6db23972bf5bc46f988a4a2385deac9cc29572f09daef"
 dependencies = [
- "hermit-abi 0.2.6",
+ "hermit-abi 0.3.0",
  "io-lifetimes",
  "rustix",
- "windows-sys 0.42.0",
+ "windows-sys",
 ]
 
 [[package]]
@@ -251,6 +248,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "abb12e687cfb44aa40f41fc3978ef76448f9b6038cad6aef4259d3c095a2382e"
 dependencies = [
  "cfg-if 1.0.0",
+]
+
+[[package]]
+name = "man"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "ebf5fa795187a80147b1ac10aaedcf5ffd3bbeb1838bda61801a1c9ad700a1c9"
+dependencies = [
+ "roff",
 ]
 
 [[package]]
@@ -422,17 +428,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "456c603be3e8d448b072f410900c09faf164fbce2d480456f50eea6e25f9c848"
 
 [[package]]
-name = "rustix"
-version = "0.36.7"
+name = "roff"
+version = "0.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d4fdebc4b395b7fbb9ab11e462e20ed9051e7b16e42d24042c776eca0ac81b03"
+checksum = "e33e4fb37ba46888052c763e4ec2acfedd8f00f62897b630cadb6298b833675e"
+
+[[package]]
+name = "rustix"
+version = "0.36.8"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "f43abb88211988493c1abb44a70efa56ff0ce98f233b7b276146f1f3f7ba9644"
 dependencies = [
  "bitflags",
  "errno",
  "io-lifetimes",
  "libc",
  "linux-raw-sys",
- "windows-sys 0.42.0",
+ "windows-sys",
 ]
 
 [[package]]
@@ -531,21 +543,6 @@ checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
 
 [[package]]
 name = "windows-sys"
-version = "0.42.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5a3e1820f08b8513f676f7ab6c1f99ff312fb97b553d30ff4dd86f9f15728aa7"
-dependencies = [
- "windows_aarch64_gnullvm",
- "windows_aarch64_msvc",
- "windows_i686_gnu",
- "windows_i686_msvc",
- "windows_x86_64_gnu",
- "windows_x86_64_gnullvm",
- "windows_x86_64_msvc",
-]
-
-[[package]]
-name = "windows-sys"
 version = "0.45.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75283be5efb2831d37ea142365f009c02ec203cd29a3ebecbc093d52315b66d0"
@@ -609,6 +606,13 @@ name = "windows_x86_64_msvc"
 version = "0.42.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "447660ad36a13288b1db4d4248e857b510e8c3a225c822ba4fb748c0aafecffd"
+
+[[package]]
+name = "xtask"
+version = "0.1.0"
+dependencies = [
+ "man",
+]
 
 [[package]]
 name = "yansi"

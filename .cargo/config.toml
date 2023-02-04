@@ -1,0 +1,10 @@
+# Usage
+#
+# $ cargo xtask deploy
+#
+[alias]
+xtask = "run --package xtask --"
+
+# If not using workspaces
+#
+# xtask = "run --manifest-path ./xtask/Cargo.toml --"
