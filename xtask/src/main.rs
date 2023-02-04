@@ -44,7 +44,7 @@ ARGS:
 }
 
 fn run_dist_doc() -> Result<(), DynError> {
-    let _ = fs::remove_dir_all(&assets_doc());
+    let _ = fs::remove_dir_all(&dir_docs());
 
     dist_doc_xtask()?;
 
@@ -66,8 +66,8 @@ fn dist_dir() -> PathBuf {
     project_root().join("target/dist")
 }
 
-fn assets_doc() -> PathBuf {
-    project_root().join("assets/doc")
+fn dir_docs() -> PathBuf {
+    project_root().join("docs/")
 }
 
 fn dist_doc_xtask() -> Result<(), DynError> {
@@ -83,7 +83,7 @@ fn dist_doc_xtask() -> Result<(), DynError> {
 
     let dst: PathBuf = project_root().join(format!("target/doc").as_str());
     let copy_from = dst.to_string_lossy();
-    let copy_to = assets_doc();
+    let copy_to = dir_docs();
     let copy_to = copy_to.to_string_lossy();
 
     match Command::new("cp")
@@ -93,7 +93,7 @@ fn dist_doc_xtask() -> Result<(), DynError> {
         .is_ok()
     {
         true => {
-            eprintln!("copying `target/doc` directory to `assets/`");
+            eprintln!("copying `target/doc` directory to `docs/`");
             let status: ExitStatus = Command::new("cp")
                 .args(&["-r", &copy_from, &copy_to])
                 .status()?;

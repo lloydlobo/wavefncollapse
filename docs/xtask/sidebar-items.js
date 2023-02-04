@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"constant":[["PKG_NAME",""]],"fn":[["assets_doc",""],["dist_binary",""],["dist_dir",""],["dist_doc_xtask",""],["dist_manpage",""],["main",""],["print_help",""],["project_root",""],["run",""],["run_dist","Removes a directory at this path, after removing all its contents. Use carefully!"],["run_dist_doc",""]],"type":[["DynError",""]]};
