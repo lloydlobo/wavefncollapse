@@ -1,5 +1,4 @@
 var sourcesIndex = JSON.parse('{\
-"wavefncollapse":["",[],["main.rs"]],\
-"xtask":["",[],["main.rs"]]\
+"wavefncollapse":["",[],["main.rs"]]\
 }');
 createSourceSidebar();

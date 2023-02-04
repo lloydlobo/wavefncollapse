@@ -1,1 +1,1 @@
-window.ALL_CRATES = ["wavefncollapse","xtask"];
+window.ALL_CRATES = ["wavefncollapse"];
